@@ -90,4 +90,4 @@ This ensures all derived or distributed versions remain open and accessible, whi
 ## Maintained by Stralya
 
 Feel free to contribute, suggest improvements, or open issues!
-
+GitHub: [Stralya/auth](https://github.com/stralya-company/auth)
