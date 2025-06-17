@@ -1,6 +1,6 @@
 {
   "name": "@stralya/auth",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "A small package to manage authentication with Prisma (User, Role, Permission)",
   "keywords": [
     "auth",
@@ -12,7 +12,7 @@
     "dist",
     "prisma/models.prisma"
   ],
-  "license": "ISC",
+  "license": "AGPL-3.0-only",
   "author": "Stralya",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
