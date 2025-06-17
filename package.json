@@ -1,0 +1,38 @@
+{
+  "name": "@stralya/auth",
+  "version": "1.0.2",
+  "description": "A small package to manage authentication with Prisma (User, Role, Permission)",
+  "keywords": [
+    "auth",
+    "rbac",
+    "prisma",
+    "next-auth"
+  ],
+  "files": [
+    "dist",
+    "prisma/models.prisma"
+  ],
+  "license": "ISC",
+  "author": "Stralya",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "cpy prisma/models.prisma dist --parents && cpy prisma/roles-seed.ts dist --parents"
+  },
+  "bin": {
+    "auth": "./dist/cli.js"
+  },
+  "peerDependencies": {
+    "@prisma/client": "^6.9.0",
+    "next": "^15.3.3"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "cpy-cli": "^5.0.0",
+    "typescript": "^5.8.3"
+  }
+}

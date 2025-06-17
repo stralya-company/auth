@@ -1,0 +1,24 @@
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  role      Role     @relation(fields: [roleId], references: [id])
+  roleId    String
+  createdAt DateTime @default(now())
+}
+
+model Role {
+  id          String       @id @default(uuid())
+  name        String       @unique
+  permissions Permission[]
+  users       User[]
+}
+
+model Permission {
+  id     Int    @id @default(autoincrement())
+  action String
+  roleId String
+  role   Role   @relation(fields: [roleId], references: [id])
+
+  @@unique([roleId, action])
+}
